@@ -24,8 +24,8 @@ namespace DependancyInjectionExample
         /// </summary>
         public static void Main()
         {
-            var potion = new Lazy<Potion>();
-            var potionToConsume = potion.Value.GetRandomPotion();
+            var potion = new Potion();
+            var potionToConsume = potion.GetRandomPotion();
 
             var player = new Lazy<PlayerEntity>(() => new PlayerEntity(potionToConsume)
             {
